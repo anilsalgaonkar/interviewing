@@ -19,4 +19,4 @@ class Solution:
         return s==s[::-1]
         
 
-print(Solution().isValid("bababa"))
+print(Solution().isValid("babab"))

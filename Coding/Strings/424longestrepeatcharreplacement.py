@@ -1,3 +1,4 @@
+
 import collections
 
 class Solution:
@@ -43,3 +44,5 @@ class Solution:
 
 
 print(Solution().characterReplacement("AABABBA",1))
+
+print(Solution().characterReplacement("AABABBA",2))

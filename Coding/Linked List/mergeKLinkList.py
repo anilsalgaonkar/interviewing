@@ -43,9 +43,9 @@ def create_linked_list(list_num):
 
 def display(linked_list):
     if(linked_list):
-        print(linked_list.val, end = " ")
+        print(linked_list.val, end = " --> ")
         while linked_list.next is not None:
-            print(linked_list.next.val, end = " ")
+            print(linked_list.next.val, end = " --> ")
             linked_list = linked_list.next
 
 list1 = create_linked_list([2])

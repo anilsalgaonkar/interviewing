@@ -1,3 +1,4 @@
+#iterative solution
 def binary_search(arr: list, k: int ) -> int:
     left = 0
     right = len(arr)-1

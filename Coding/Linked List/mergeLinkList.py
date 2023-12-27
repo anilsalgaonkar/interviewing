@@ -21,8 +21,8 @@ class Solution:
             tail.next = l1
         elif l2:
             tail.next = l2
-        
-        return dummy.next
+
+        return dummy.next  # dummy helps to return the merged linkedlist
 
 
             
