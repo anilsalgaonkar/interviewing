@@ -4,9 +4,9 @@ def smallestisland(grid):
     visited = set()
     for row in range(len(grid)):
         for col in range(len(grid[0])):
-            currcount = explore(row, col, grid, visited)
-            if currcount > 0:
-                smallest = min(smallest,currcount)
+            currsize = explore(row, col, grid, visited)
+            if currsize > 0:
+                smallest = min(smallest,currsize)
     return smallest
 
 def explore(row, col, grid, visited):
@@ -24,13 +24,13 @@ def explore(row, col, grid, visited):
         return 0
     
     visited.add(pos)
-    count = 1
-    count += explore(row, col+1, grid, visited)
-    count += explore(row, col-1, grid, visited)
-    count += explore(row+1, col, grid, visited)
-    count += explore(row-1, col, grid, visited)
+    size = 1
+    size += explore(row, col+1, grid, visited)
+    size += explore(row, col-1, grid, visited)
+    size += explore(row+1, col, grid, visited)
+    size += explore(row-1, col, grid, visited)
 
-    return count
+    return size
 
 grid = [
   ['W', 'L', 'W', 'W', 'W'],

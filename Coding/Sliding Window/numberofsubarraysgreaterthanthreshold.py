@@ -2,12 +2,6 @@
 
 class Solution(object):
     def numOfSubarrays(self, arr, k, threshold):
-        """
-        :type arr: List[int]
-        :type k: int
-        :type threshold: int
-        :rtype: int
-        """
         count = 0
         sum = 0
         l = 0
@@ -22,3 +16,19 @@ class Solution(object):
         if sum >= threshold * k:
             count += 1
         return count
+
+    def numOfSubarrays2(self, arr, k, threshold):
+        count = 0 
+        sum = sum(arr[:k])
+        if sum >= threshold * k:
+            count += 1
+
+        for i in range(len(arr)-k):
+            sum += arr[i+k]
+            sum -= arr[i]
+            if sum >= threshold * k:
+                count += 1
+        
+        return count
+
+

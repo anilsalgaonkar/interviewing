@@ -1,4 +1,4 @@
-
+#https://leetcode.com/problems/populating-next-right-pointers-in-each-node/description/
 # Definition for a Node.
 class Node:
     def __init__(self, val: int = 0, left: 'Node' = None, right: 'Node' = None, next: 'Node' = None):

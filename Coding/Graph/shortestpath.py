@@ -15,14 +15,16 @@ def shortest_path(graph, src, tgt):
     return -1
 
 
-
+# convert edges to adjacency list:
 def create_graph(edges):
   g = {}
   for i, j  in edges:
-    if i not in g:
-      g[i] = []
-    if j not in g:
-      g[j] = []
+    # if i not in g:
+    #   g[i] = []
+    # if j not in g:
+    #   g[j] = []
+    g[i] = g.get(i,[])
+    g[j] = g.get(j,[])
     g[i].append(j)
     g[j].append(i)
   return g
@@ -37,4 +39,5 @@ edges = [
   ['a', 'b']
 ]
 
-print(shortest_path(create_graph(edges), 'w', 'a')) # -> 2
+print(shortest_path(create_graph(edges), 'w', 'a')) # -> -1
+print(shortest_path(create_graph(edges), 'w', 'y')) # -> 2

@@ -13,4 +13,20 @@ def fib(num):
 print(fib(0))
 print(fib(1))
 print(fib(2))
-print(fib(6))
+print(fib(35))
+
+
+#recursive with memoization
+def fib(num, memo):
+    if num in memo:
+        return memo[num]
+    if num <=1:
+        return num
+    memo[num] = fib(num-1, memo) + fib(num-2, memo)
+    return memo[num]
+    
+memo = {}
+print(fib(0,memo))
+print(fib(1,memo))
+print(fib(2,memo))
+print(fib(35,memo))

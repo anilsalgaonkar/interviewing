@@ -4,7 +4,7 @@ class TreeNode:
         self.left = left
         self.right = right
 
-#using iterative. print the list and also return the list. very difficult to write recursive solution for BFS
+# DONT USE THIS. USE bfsiterative below. using iterative. print the list and also return the list. very difficult to write recursive solution for BFS
 def breadthfirsttraversal(root) -> list:
     if not root:
         return None
@@ -12,7 +12,7 @@ def breadthfirsttraversal(root) -> list:
     queue  = [root]
     res = []
     while queue:
-        cur = queue.pop(0)
+        cur = queue.pop(0) # < =====  not effecient since popping from front shifts the entire array to left. use deque for BFS 
         print(cur.val)
         res.append(cur.val)
         if cur.left:
