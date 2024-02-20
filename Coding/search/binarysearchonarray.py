@@ -5,10 +5,10 @@ def binary_search(arr: list, k: int ) -> int:
     res = -1
     while left < right:
         mid = (left + right) // 2
-        curr = arr[mid]
-        if curr == k:
+        mid_val = arr[mid]
+        if mid_val == k:
             return mid
-        if curr < k:
+        if mid_val < k:
             left = mid + 1
         else:
             right = mid -1 

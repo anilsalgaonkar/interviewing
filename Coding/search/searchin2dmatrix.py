@@ -14,6 +14,7 @@ def search(matrix,target):
     ce = len(matrix[0])-1
     
     while rs<=re and cs<=ce:
+        # figure out the row first
         if rs != re:
             midrow = (rs+re)//2
             midrowstartval = matrix[midrow][cs]
@@ -27,6 +28,7 @@ def search(matrix,target):
             else:
                 rs = midrow
                 re = midrow
+        # figure out the number in the row
         else:
             midcol = (cs + ce)//2
             midcolval = matrix[rs][midcol]

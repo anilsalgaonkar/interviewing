@@ -1,5 +1,3 @@
-# this has O(n^2) 
-# can you improve it ?
 
 def evaluate(s):
     

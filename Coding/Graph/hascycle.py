@@ -1,24 +1,24 @@
 def has_cycle(graph):
-    complete = set()
+    memo = set()  # cache
     for node  in graph:
-        if _hascycle(node,graph, set(), complete):
+        if explore(node,graph, set(), memo):
             return True
     return False
 
-def _hascycle(node, graph,visiting, complete):
+def explore(node, graph,visiting, memo):
 
     if node in visiting:
         return True
 
-    if node in complete:
+    if node in memo:
         return False
 
     visiting.add(node)
     for neigh in graph[node]:
-        if _hascycle(neigh, graph, visiting, complete):
+        if explore(neigh, graph, visiting, memo):
             return True
     visiting.remove(node)
-    complete.add(node)
+    memo.add(node)
 
     return False
 

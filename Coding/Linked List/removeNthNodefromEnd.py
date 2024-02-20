@@ -53,8 +53,7 @@ class Solution:
             right = right.next
             left = left.next
 
-        tmp = left.next.next
-        left.next = tmp
+        left.next = left.next.next
 
         return dummy.next
 
@@ -77,7 +76,6 @@ class Solution:
             
             if index == n:
                 node = node.next # very clever, return the next node if this is the nth node.
-            
             
             return index, node
         
